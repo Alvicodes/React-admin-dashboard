@@ -16,7 +16,6 @@ function RecentSalesTable({ items }) {
             default:
                 return 'success';
         }
-
     };
 
     return (
@@ -53,11 +52,8 @@ function RecentSalesTable({ items }) {
                         </tr>
                     ))}
             </tbody>
-
-
-
         </table>
-    )
+    );
 }
 
 export default RecentSalesTable

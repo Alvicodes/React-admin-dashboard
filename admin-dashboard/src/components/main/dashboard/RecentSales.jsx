@@ -6,13 +6,13 @@ import RecentSalesTable from './RecentSalesTable';
 function RecentSales() {
     const [items, setItems] = useState([]);
     const [filter, setFilter] = useState('Today');
-    const handleFilterChange = flter => {
+    const handleFilterChange = filter => {
         setFilter(filter);
     }
 
     // Fetch data from the url 
     const fetchData = () => {
-        fetch('https://localhost:4000/recentsales')
+        fetch('http://localhost:4000/recentsales')
             .then(res => res.json())
             .then(data => {
                 setItems(data);
