@@ -38,4 +38,4 @@ function RecentSales() {
     );
 }
 
-export default RecentSales
+export default RecentSales;
