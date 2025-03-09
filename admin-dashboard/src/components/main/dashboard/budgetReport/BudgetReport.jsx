@@ -21,7 +21,7 @@ function BudgetReport() {
                 <BudgetChart />
             </div>
         </div>
-    )
+    );
 }
 
 export default BudgetReport;
