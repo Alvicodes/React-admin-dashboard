@@ -11,15 +11,15 @@ function BudgetChart() {
                 shape: 'circle',
                 indicator: [
                     {
-                        name: 'Sales',
+                        name: 'Development',
                         max: 6500,
                     },
                     {
-                        name: 'Administration',
+                        name: 'Admin',
                         max: 16000,
                     },
                     {
-                        name: 'Information Technology',
+                        name: 'IT',
                         max: 30000,
                     },
                     {
@@ -27,7 +27,7 @@ function BudgetChart() {
                         max: 38000,
                     },
                     {
-                        name: 'Development',
+                        name: 'Sales',
                         max: 52000,
                     },
                     {
@@ -58,8 +58,8 @@ function BudgetChart() {
     return (
         <div
             id='budgetChart'
-            // style={{ minHeight: '400px' }}
-            className='echart'
+            style={{ minHeight: '400px' }}
+            className='echart, d-flex'
         >
         </div>
     )

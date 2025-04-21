@@ -1,37 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './dashboard.css'
-import Card from './Card';
 import Reports from './report/Reports';
 import RecentSales from './RecentSales';
 import TopSelling from './TopSelling';
 import RecentActivity from './recent-activity/RecentActivity';
 import BudgetReport from './budgetReport/BudgetReport';
+import WebTraffic from './webTraffic/WebTraffic';
+import News from './news/News';
+import Cards from './Cards';
 
 function Dashboard() {
-    const [cards, setCards] = useState([])
-
-    const fetchData = () => {
-        fetch('http://localhost:4000/cards')
-            .then(res => res.json())
-            .then(data => {
-                setCards(data);
-            })
-            .catch(e => console.log(e.message));
-    };
-
-    useEffect(() => {
-        fetchData();
-    }, []);
 
     return (
         <section className='dashboard section'>
             <div className="row">
                 <div className="col-lg-8">
                     <div className="row">
-                        {
-                            cards && cards.length > 0 &&
-                            cards.map(card => <Card key={card._id} card={card} />)
-                        }
+                        <Cards />
                         <div className="col-12">
                             < Reports />
                         </div>
@@ -46,6 +31,8 @@ function Dashboard() {
                 <div className="col-lg-4">
                     <RecentActivity />
                     <BudgetReport />
+                    <WebTraffic />
+                    <News />
 
                 </div>
             </div>
